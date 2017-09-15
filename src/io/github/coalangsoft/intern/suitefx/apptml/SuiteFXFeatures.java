@@ -8,6 +8,8 @@ import org.jsoup.select.Elements;
 
 import io.github.apptml.platform.AppTMLFeatures;
 import io.github.coalangsoft.intern.suitefx.apptml.intern.AppTMLSuitePart;
+import io.github.coalangsoft.intern.suitefx.apptml.intern.FXMLSuitePart;
+import io.github.coalangsoft.intern.suitefx.part.SuitePart;
 import io.github.coalangsoft.lib.data.Func;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -21,8 +23,10 @@ public class SuiteFXFeatures extends AppTMLFeatures {
 	private final ArrayList<Element> htmlMenus;
 	public String title = "Dummy 'app'";
 	public String menutitle = "Dummy 'name'";
-	public ArrayList<AppTMLSuitePart> perspectives;
+	public ArrayList<SuitePart> perspectives;
 	public boolean noperspective = false;
+	public boolean usesMenubar = true;
+	public String styleBase;
 	
 	{
 		htmlMenus = new ArrayList<>();
@@ -59,9 +63,18 @@ public class SuiteFXFeatures extends AppTMLFeatures {
 
 			@Override
 			public Void call(Element p) {
-				switch(p.attr("type")){
+				String type = p.attr("type");
+				String src = p.attr("abs:src");
+				if(type.isEmpty()){
+					String[] split = src.split("\\.");
+					type = split[split.length - 1];
+				}
+				switch(type){
 				case "html":
-					perspectives.add(new AppTMLSuitePart(p.attr("name"), p.attr("src")));
+					perspectives.add(new AppTMLSuitePart(p.attr("name"), src));
+					break;
+				case "fxml":
+					perspectives.add(new FXMLSuitePart(p.attr("name"), src, p.attr("abs:code")));
 					break;
 				default: throw new RuntimeException("Unknown perspective type: " + p.attr("type"));
 				}
@@ -77,6 +90,20 @@ public class SuiteFXFeatures extends AppTMLFeatures {
 				return null;
 			}
 			
+		});
+		add("menubar", new Func<Element, Void>(){
+			@Override
+			public Void call(Element p) {
+				usesMenubar = Boolean.parseBoolean(p.attr("used"));
+				return null;
+			}
+		});
+		add("style", new Func<Element, Void>(){
+			@Override
+			public Void call(Element p) {
+				styleBase = p.attr("base");
+				return null;
+			}
 		});
 	}
 

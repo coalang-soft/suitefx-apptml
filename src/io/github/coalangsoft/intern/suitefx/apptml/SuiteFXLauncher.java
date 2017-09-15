@@ -15,7 +15,7 @@ public class SuiteFXLauncher implements AppTMLLauncher<WebEngine> {
 	}
 
 	@Override
-	public void onMainTag(Element mainTag) {
+	public void onMainTag(AppTMLFeatures f, Element mainTag) {
 		throw new RuntimeException("NIy");
 	}
 
