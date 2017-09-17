@@ -6,19 +6,16 @@ import java.util.List;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import io.github.apptml.iface.LanguageEngine;
 import io.github.apptml.platform.AppTMLFeatures;
-import io.github.coalangsoft.intern.suitefx.apptml.intern.AppTMLSuitePart;
-import io.github.coalangsoft.intern.suitefx.apptml.intern.FXMLSuitePart;
 import io.github.coalangsoft.intern.suitefx.part.SuitePart;
 import io.github.coalangsoft.lib.data.Func;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
-import javafx.scene.web.WebEngine;
-import javafx.scene.web.WebView;
 
-public class SuiteFXFeatures extends AppTMLFeatures {
+public class SuiteFXFeatures extends AppTMLFeatures<SuitePart> {
 	
 	private final ArrayList<Element> htmlMenus;
 	public String title = "Dummy 'app'";
@@ -69,15 +66,10 @@ public class SuiteFXFeatures extends AppTMLFeatures {
 					String[] split = src.split("\\.");
 					type = split[split.length - 1];
 				}
-				switch(type){
-				case "html":
-					perspectives.add(new AppTMLSuitePart(p.attr("name"), src));
-					break;
-				case "fxml":
-					perspectives.add(new FXMLSuitePart(p.attr("name"), src, p.attr("abs:code")));
-					break;
-				default: throw new RuntimeException("Unknown perspective type: " + p.attr("type"));
-				}
+				
+				System.out.println(getPlatform());
+				
+				perspectives.add(getPlatform().styleLanguages.get(type.trim()).createUI(SuiteFXFeatures.this, p));
 				return null;
 			}
 			
@@ -107,7 +99,7 @@ public class SuiteFXFeatures extends AppTMLFeatures {
 		});
 	}
 
-	public List<Menu> makeMenus(WebEngine e){
+	public List<Menu> makeMenus(LanguageEngine e){
 		ArrayList<Menu> menus = new ArrayList<>();
 		for(int i = 0; i < htmlMenus.size(); i++){
 			menus.add(createBaseMenu(e, htmlMenus.get(i)));
@@ -115,7 +107,7 @@ public class SuiteFXFeatures extends AppTMLFeatures {
 		return menus;
 	}
 	
-	private Menu createBaseMenu(WebEngine eng, Element p) {
+	private Menu createBaseMenu(LanguageEngine eng, Element p) {
 		Menu m = new Menu(p.attr("text"));
 		
 		Elements submenus = p.children();
@@ -130,7 +122,7 @@ public class SuiteFXFeatures extends AppTMLFeatures {
 		return m;
 	}
 
-	private MenuItem createMenu(WebEngine eng, Menu m, Element element) {
+	private MenuItem createMenu(LanguageEngine eng, Menu m, Element element) {
 		Elements sub = element.children();
 		if(sub.size() == 0){
 			MenuItem i = new MenuItem(element.attr("text"));
@@ -148,14 +140,14 @@ public class SuiteFXFeatures extends AppTMLFeatures {
 		setMenuAction(eng, men, element);
 		return men;
 	}
-
-	private void setMenuAction(final WebEngine eng, MenuItem i, Element element) {
+	
+	private void setMenuAction(final LanguageEngine eng, MenuItem i, Element element) {
 		final String action = element.attr("action");
 		if(action != null){
 			i.setOnAction(new EventHandler<ActionEvent>() {
 				@Override
 				public void handle(ActionEvent event) {
-					eng.executeScript(action);
+					eng.invoke(action);
 				}
 			});
 		}

@@ -1,22 +1,29 @@
-package io.github.coalangsoft.intern.suitefx.apptml.intern;
+package io.github.coalangsoft.intern.suitefx.apptml.languages.intern;
 
+import java.util.List;
+
+import io.github.coalangsoft.intern.suitefx.apptml.SuiteFXFeatures;
+import io.github.coalangsoft.intern.suitefx.apptml.languages.WebEngineWrapper;
 import io.github.coalangsoft.intern.suitefx.part.SimpleSuitePart;
-import io.github.coalangsoft.intern.suitefx.state.PartState;
+import io.github.coalangsoft.jsearch.JSearchEngine;
 import javafx.event.EventHandler;
 import javafx.scene.Node;
+import javafx.scene.control.Menu;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebErrorEvent;
 import javafx.scene.web.WebView;
-import netscape.javascript.JSException;
 
 public class AppTMLSuitePart extends SimpleSuitePart {
 
 	private String url;
 	private String name;
+	private SuiteFXFeatures features;
+	private WebEngine engine;
 
-	public AppTMLSuitePart(String name, String url) {
+	public AppTMLSuitePart(SuiteFXFeatures features, String name, String url) {
 		this.url = url;
 		this.name = name;
+		this.features = features;
 	}
 
 	@Override
@@ -38,6 +45,8 @@ public class AppTMLSuitePart extends SimpleSuitePart {
 				
 			});
 			engine.load(url);
+			
+			this.engine = engine;
 			System.out.println(v);
 			return v;
 		}catch(Exception e){
@@ -48,6 +57,10 @@ public class AppTMLSuitePart extends SimpleSuitePart {
 	
 	public String getName(){
 		return name;
+	}
+	
+	public List<Menu> createMenus(JSearchEngine<?> se){
+		return features.makeMenus(WebEngineWrapper.wrap(engine));
 	}
 
 }

@@ -1,15 +1,12 @@
-package io.github.coalangsoft.intern.suitefx.apptml.intern;
+package io.github.coalangsoft.intern.suitefx.apptml.languages.intern;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.List;
 
-import javax.script.ScriptEngine;
-import javax.script.ScriptEngineManager;
-import javax.script.ScriptException;
-
+import io.github.apptml.iface.LanguageEngine;
+import io.github.apptml.platform.AppTMLPlatform;
 import io.github.coalangsoft.intern.suitefx.part.SimpleSuitePart;
+import io.github.coalangsoft.intern.suitefx.part.SuitePart;
 import io.github.coalangsoft.intern.suitefx.state.PartState;
 import io.github.coalangsoft.visit.Visitor;
 import io.github.coalangsoft.visitfx.ParentChildrenVisitor;
@@ -23,20 +20,21 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.ToolBar;
 import jdk.nashorn.api.scripting.ScriptObjectMirror;
-import jdk.nashorn.api.scripting.URLReader;
 import netscape.javascript.JSException;
 
-public class FXMLSuitePart extends SimpleSuitePart{
+public class FXMLSuitePart extends SimpleSuitePart {
 
 	private String title;
 	private String url;
 	private String code;
-	private ScriptEngine engine;
+	private LanguageEngine engine;
+	private AppTMLPlatform<SuitePart> platform;
 
-	public FXMLSuitePart(String title, String fxmlUrl, String codepath) {
+	public FXMLSuitePart(AppTMLPlatform<SuitePart> platform, String title, String fxmlUrl, String codepath) {
 		this.title = title;
 		this.url = fxmlUrl;
 		this.code = codepath;
+		this.platform = platform;
 	}
 
 	@Override
@@ -45,7 +43,7 @@ public class FXMLSuitePart extends SimpleSuitePart{
 			Node view = FXMLLoader.load(new URL(url));
 			if(code != null){
 				String[] split = code.split("\\.");
-				engine = new ScriptEngineManager().getEngineByExtension(split[split.length - 1]);
+				engine = platform.scriptLanguages.get(split[split.length - 1]).newEngine();
 				
 				Visitor v = new Visitor();
 				v.addFunction(Node.class, (n) -> {
@@ -61,10 +59,10 @@ public class FXMLSuitePart extends SimpleSuitePart{
 				v.addFunction(ToolBar.class, new ToolbarContentVisitor(v));
 				v.handle(view);
 				
-				engine.eval(new URLReader(new URL(code)));
+				engine.evalUrl(code);
 			}
 			return view;
-		} catch (IOException | ScriptException e) {
+		} catch (IOException e) {
 			e.printStackTrace();
 			throw new RuntimeException(e);
 		}
@@ -76,16 +74,14 @@ public class FXMLSuitePart extends SimpleSuitePart{
 	
 	public void restoreState(Node n, PartState s){
 		try{
-			if(engine.get("restoreState") != null){
-				((ScriptObjectMirror) engine.get("restoreState")).call(new Object(), n,s);
-			}
-		}catch(JSException e){e.printStackTrace();}
+			engine.invoke("restoreState", n,s);
+		}catch(RuntimeException e){e.printStackTrace();}
 	}
 	
 	public void storeState(Node n, PartState s){
-		if(engine.get("storeState") != null){
-			((ScriptObjectMirror) engine.get("storeState")).call(new Object(), n,s);
-		}
+		try{
+			engine.invoke("storeState", n,s);
+		}catch(RuntimeException e){e.printStackTrace();}
 	}
 
 }

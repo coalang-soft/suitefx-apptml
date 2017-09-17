@@ -13,20 +13,19 @@ import org.jsoup.select.Elements;
 
 import cpa.subos.io.BufferIOBase;
 import cpa.subos.io.IO;
-import cpa.subos.io.file.FileIOBase;
+import io.github.apptml.iface.LanguageEngine;
 import io.github.apptml.platform.AppTMLDisplay;
 import io.github.coalangsoft.intern.suitefx.Styles;
 import io.github.coalangsoft.intern.suitefx.SuiteView;
-import io.github.coalangsoft.intern.suitefx.apptml.intern.AppTMLSuitePart;
+import io.github.coalangsoft.intern.suitefx.apptml.languages.WebEngineWrapper;
+import io.github.coalangsoft.intern.suitefx.apptml.languages.intern.AppTMLSuitePart;
 import javafx.application.Platform;
-import javafx.concurrent.Service;
-import javafx.concurrent.Task;
 import javafx.embed.swing.JFXPanel;
 import javafx.scene.Scene;
 import javafx.scene.web.WebEngine;
 import javafx.stage.Stage;
 
-public class SuiteFXDisplay implements AppTMLDisplay<WebEngine> {
+public class SuiteFXDisplay implements AppTMLDisplay {
 	
 	private Stage stage;
 	private WebEngine engine;
@@ -43,21 +42,31 @@ public class SuiteFXDisplay implements AppTMLDisplay<WebEngine> {
 			public void run() {
 				stage = new Stage();
 				setUI(url);
+				System.out.println(stage);
 			}
 		});
-		while(stage == null);
+		System.out.println(stage);
+		while(true){
+			if(stage != null) break;
+			stuff(stage);
+		}
+		System.out.println("...");
 	}
 	
+	private void stuff(Stage s) {
+		System.out.println(s);
+	}
+
 	@Override
-	public WebEngine getJSEngine() {
+	public LanguageEngine getJSEngine() {
 		while(engine == null);
-		return engine;
+		return WebEngineWrapper.wrap(engine);
 	}
 	
 	private void setUI(String url) {
 		this.v = new SuiteView(features.title, features.usesMenubar);
 		if(!features.noperspective){
-			v.add(new AppTMLSuitePart(features.menutitle, url));
+			v.add(new AppTMLSuitePart(features, features.menutitle, url));
 		}
 		for(int i = 0; i < features.perspectives.size(); i++){
 			v.add(features.perspectives.get(i));
@@ -102,7 +111,7 @@ public class SuiteFXDisplay implements AppTMLDisplay<WebEngine> {
 					s.getStylesheets().add(e.attr("href"));
 				}
 			}
-		}catch(IOException | URISyntaxException e){
+		}catch(Exception e){
 			e.printStackTrace();
 		}
 		
