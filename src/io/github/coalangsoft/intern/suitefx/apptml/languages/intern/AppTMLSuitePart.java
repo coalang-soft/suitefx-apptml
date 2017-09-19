@@ -1,6 +1,10 @@
 package io.github.coalangsoft.intern.suitefx.apptml.languages.intern;
 
+import java.io.IOException;
+import java.net.URISyntaxException;
 import java.util.List;
+
+import org.jsoup.select.Elements;
 
 import io.github.coalangsoft.intern.suitefx.apptml.SuiteFXFeatures;
 import io.github.coalangsoft.intern.suitefx.apptml.languages.WebEngineWrapper;
@@ -19,11 +23,17 @@ public class AppTMLSuitePart extends SimpleSuitePart {
 	private String name;
 	private SuiteFXFeatures features;
 	private WebEngine engine;
+	private Elements menus;
 
 	public AppTMLSuitePart(SuiteFXFeatures features, String name, String url) {
 		this.url = url;
 		this.name = name;
 		this.features = features;
+		try {
+			this.menus = features.document(url).getElementsByTag("apptml-basemenu");
+		} catch (IOException | URISyntaxException e) {
+			throw new RuntimeException(e);
+		}
 	}
 
 	@Override
@@ -60,7 +70,7 @@ public class AppTMLSuitePart extends SimpleSuitePart {
 	}
 	
 	public List<Menu> createMenus(JSearchEngine<?> se){
-		return features.makeMenus(WebEngineWrapper.wrap(engine));
+		return features.makeMenus(WebEngineWrapper.wrap(engine), menus);
 	}
 
 }

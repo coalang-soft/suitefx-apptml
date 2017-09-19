@@ -17,7 +17,6 @@ import javafx.scene.control.MenuItem;
 
 public class SuiteFXFeatures extends AppTMLFeatures<SuitePart> {
 	
-	private final ArrayList<Element> htmlMenus;
 	public String title = "Dummy 'app'";
 	public String menutitle = "Dummy 'name'";
 	public ArrayList<SuitePart> perspectives;
@@ -26,18 +25,8 @@ public class SuiteFXFeatures extends AppTMLFeatures<SuitePart> {
 	public String styleBase;
 	
 	{
-		htmlMenus = new ArrayList<>();
 		perspectives = new ArrayList<>();
 		
-		add("basemenu", new Func<Element, Void>(){
-
-			@Override
-			public Void call(Element p) {
-				htmlMenus.add(p);
-				return null;
-			}
-			
-		});
 		add("app", new Func<Element, Void>(){
 
 			@Override
@@ -99,10 +88,10 @@ public class SuiteFXFeatures extends AppTMLFeatures<SuitePart> {
 		});
 	}
 
-	public List<Menu> makeMenus(LanguageEngine e){
+	public List<Menu> makeMenus(LanguageEngine e, List<Element> ms){
 		ArrayList<Menu> menus = new ArrayList<>();
-		for(int i = 0; i < htmlMenus.size(); i++){
-			menus.add(createBaseMenu(e, htmlMenus.get(i)));
+		for(int i = 0; i < ms.size(); i++){
+			menus.add(createBaseMenu(e, ms.get(i)));
 		}
 		return menus;
 	}
@@ -144,6 +133,9 @@ public class SuiteFXFeatures extends AppTMLFeatures<SuitePart> {
 	private void setMenuAction(final LanguageEngine eng, MenuItem i, Element element) {
 		final String action = element.attr("action");
 		if(action != null){
+			if(action.isEmpty()){
+				return;
+			}
 			i.setOnAction(new EventHandler<ActionEvent>() {
 				@Override
 				public void handle(ActionEvent event) {

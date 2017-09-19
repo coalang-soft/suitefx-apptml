@@ -16,7 +16,7 @@ public class AppTMLTest {
 
 	public static void main(String[] args) throws MalformedURLException, IOException, InstantiationException, IllegalAccessException, ClassNotFoundException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException{
 //		Properties ps = new Properties();
-		File f = new File("F:/Info/CCL/AppTML/pseudo.html");
+		File f = new File("F:/Info/CCL/AppTML/demo.html");
 //		ps.load(new FileInputStream(new File("settings.properties")));
 		
 		String url = f.toURI().toURL().toExternalForm();

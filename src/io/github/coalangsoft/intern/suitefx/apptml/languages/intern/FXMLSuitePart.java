@@ -19,8 +19,6 @@ import javafx.scene.Parent;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TabPane;
 import javafx.scene.control.ToolBar;
-import jdk.nashorn.api.scripting.ScriptObjectMirror;
-import netscape.javascript.JSException;
 
 public class FXMLSuitePart extends SimpleSuitePart {
 

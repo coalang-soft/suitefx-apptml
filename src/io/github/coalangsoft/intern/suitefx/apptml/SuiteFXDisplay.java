@@ -1,12 +1,7 @@
 package io.github.coalangsoft.intern.suitefx.apptml;
 
 import java.io.File;
-import java.io.IOException;
-import java.net.URISyntaxException;
-import java.net.URL;
-import java.nio.file.Paths;
 
-import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -32,7 +27,7 @@ public class SuiteFXDisplay implements AppTMLDisplay {
 	private SuiteFXFeatures features;
 	private SuiteView v;
 	
-	public SuiteFXDisplay(SuiteFXFeatures features, final String url) {
+	public SuiteFXDisplay(SuiteFXFeatures features, final String url, Document doc) {
 		this.features = features;
 		
 		//init ui
@@ -41,7 +36,7 @@ public class SuiteFXDisplay implements AppTMLDisplay {
 			@Override
 			public void run() {
 				stage = new Stage();
-				setUI(url);
+				setUI(url, doc);
 				System.out.println(stage);
 			}
 		});
@@ -63,7 +58,7 @@ public class SuiteFXDisplay implements AppTMLDisplay {
 		return WebEngineWrapper.wrap(engine);
 	}
 	
-	private void setUI(String url) {
+	private void setUI(String url, Document doc) {		
 		this.v = new SuiteView(features.title, features.usesMenubar);
 		if(!features.noperspective){
 			v.add(new AppTMLSuitePart(features, features.menutitle, url));
@@ -84,14 +79,8 @@ public class SuiteFXDisplay implements AppTMLDisplay {
 		try{
 			BufferIOBase temp = IO.buffer();
 			
-			Document d;
+			Document d = features.document(url);
 			
-			//from <style> tags
-			if(url.startsWith("file:/")){
-				d = Jsoup.parse(Paths.get(new URL(url).toURI()).toFile(), "UTF-8");
-			}else{
-				d = Jsoup.parse(new URL(url), 3000);
-			}
 			Elements es = d.getElementsByTag("style");
 			System.out.println(es.size());
 			for(int i = 0; i < es.size(); i++){

@@ -1,5 +1,6 @@
 package io.github.coalangsoft.intern.suitefx.apptml;
 
+import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 import io.github.apptml.platform.AppTMLDisplay;
@@ -10,8 +11,8 @@ import io.github.coalangsoft.intern.suitefx.part.SuitePart;
 public class SuiteFXLauncher implements AppTMLLauncher<SuitePart> {
 	
 	@Override
-	public AppTMLDisplay display(AppTMLFeatures<SuitePart> features, String url) {
-		return new SuiteFXDisplay((SuiteFXFeatures) features, url);
+	public AppTMLDisplay display(AppTMLFeatures<SuitePart> features, String url, Document doc) {
+		return new SuiteFXDisplay((SuiteFXFeatures) features, url, doc);
 	}
 
 	@Override
