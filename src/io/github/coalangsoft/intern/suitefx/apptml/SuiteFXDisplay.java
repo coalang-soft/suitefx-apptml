@@ -88,7 +88,7 @@ public class SuiteFXDisplay implements AppTMLDisplay {
 			}
 			
 			s.getStylesheets().add(
-					IO.file(File.createTempFile("apptmlcss", ".css")).downloadFrom(temp)
+					IO.file("apptmlcss.css").downloadFrom(temp)
 			.toUrl());
 			
 			//from <link> tags

@@ -3,6 +3,8 @@ package io.github.coalangsoft.intern.suitefx.apptml;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.swing.JOptionPane;
+
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
@@ -10,6 +12,7 @@ import io.github.apptml.iface.LanguageEngine;
 import io.github.apptml.platform.AppTMLFeatures;
 import io.github.coalangsoft.intern.suitefx.part.SuitePart;
 import io.github.coalangsoft.lib.data.Func;
+import io.github.coalangsoft.lib.security.SecurityProfile;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.Menu;
@@ -95,7 +98,7 @@ public class SuiteFXFeatures extends AppTMLFeatures<SuitePart> {
 		}
 		return menus;
 	}
-	
+
 	private Menu createBaseMenu(LanguageEngine eng, Element p) {
 		Menu m = new Menu(p.attr("text"));
 		
