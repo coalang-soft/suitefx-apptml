@@ -1,6 +1,6 @@
 package io.github.coalangsoft.intern.suitefx.apptml;
 
-import io.github.apptml.platform.AppTMLPlatform;
+import io.github.apptml.base.platform.AppTMLPlatform;
 import io.github.coalangsoft.intern.suitefx.apptml.languages.SuiteFxFxmlPlatform;
 import io.github.coalangsoft.intern.suitefx.apptml.languages.SuiteFxHtmlPlatform;
 import io.github.coalangsoft.intern.suitefx.part.SuitePart;

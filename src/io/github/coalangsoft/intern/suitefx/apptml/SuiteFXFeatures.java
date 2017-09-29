@@ -8,8 +8,8 @@ import javax.swing.JOptionPane;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import io.github.apptml.iface.LanguageEngine;
-import io.github.apptml.platform.AppTMLFeatures;
+import io.github.apptml.base.platform.AppTMLFeatures;
+import io.github.apptml.urlscripting.LanguageEngine;
 import io.github.coalangsoft.intern.suitefx.part.SuitePart;
 import io.github.coalangsoft.lib.data.Func;
 import io.github.coalangsoft.lib.security.SecurityProfile;

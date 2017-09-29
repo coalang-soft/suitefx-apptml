@@ -2,8 +2,8 @@ package io.github.coalangsoft.intern.suitefx.apptml.languages;
 
 import org.jsoup.nodes.Element;
 
-import io.github.apptml.iface.StyleLanguage;
-import io.github.apptml.platform.AppTMLFeatures;
+import io.github.apptml.base.iface.StyleLanguage;
+import io.github.apptml.base.platform.AppTMLFeatures;
 import io.github.coalangsoft.intern.suitefx.apptml.languages.intern.FXMLSuitePart;
 import io.github.coalangsoft.intern.suitefx.part.SuitePart;
 

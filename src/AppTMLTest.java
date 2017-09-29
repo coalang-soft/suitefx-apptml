@@ -8,7 +8,7 @@ import java.util.Properties;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-import io.github.apptml.AppTML;
+import io.github.apptml.base.AppTML;
 import io.github.coalangsoft.intern.suitefx.apptml.SuiteFXPlatform;
 import io.github.coalangsoft.lib.security.SecurityProfile;
 

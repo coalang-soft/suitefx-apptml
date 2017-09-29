@@ -8,8 +8,8 @@ import org.jsoup.select.Elements;
 
 import cpa.subos.io.BufferIOBase;
 import cpa.subos.io.IO;
-import io.github.apptml.iface.LanguageEngine;
-import io.github.apptml.platform.AppTMLDisplay;
+import io.github.apptml.base.platform.AppTMLDisplay;
+import io.github.apptml.urlscripting.LanguageEngine;
 import io.github.coalangsoft.intern.suitefx.Styles;
 import io.github.coalangsoft.intern.suitefx.SuiteView;
 import io.github.coalangsoft.intern.suitefx.apptml.languages.WebEngineWrapper;

@@ -3,8 +3,8 @@ package io.github.coalangsoft.intern.suitefx.apptml.languages.intern;
 import java.io.IOException;
 import java.net.URL;
 
-import io.github.apptml.iface.LanguageEngine;
-import io.github.apptml.platform.AppTMLPlatform;
+import io.github.apptml.base.platform.AppTMLPlatform;
+import io.github.apptml.urlscripting.LanguageEngine;
 import io.github.coalangsoft.intern.suitefx.part.SimpleSuitePart;
 import io.github.coalangsoft.intern.suitefx.part.SuitePart;
 import io.github.coalangsoft.intern.suitefx.state.PartState;

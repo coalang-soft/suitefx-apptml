@@ -1,6 +1,6 @@
 package io.github.coalangsoft.intern.suitefx.apptml.languages;
 
-import io.github.apptml.iface.LanguageEngine;
+import io.github.apptml.urlscripting.LanguageEngine;
 import javafx.scene.web.WebEngine;
 
 public class WebEngineWrapper {
