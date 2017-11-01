@@ -1,87 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f8bb5208-fc70-4fc0-b523-cc9db938cb84" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/AppTMLTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/MapTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/io/BufferIOBase$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/io/BufferIOBase$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/io/BufferIOBase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/io/IO.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/io/IOBase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/io/IOBaseImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/io/InputStreamIOBase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/io/OutputStreamIOBase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/io/UrlIOBase$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/io/UrlIOBase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/io/file/Directory.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/io/file/FileExtensionFilter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/io/file/FileFilters.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/io/file/FileIOBase$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/io/file/FileIOBase$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/io/file/FileIOBase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/user/SearchBasedDRDA.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/user/User.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/user/UserImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/user/Users.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/user/dataaccess/core/IEasyAccessReadData.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/user/dataaccess/core/ReadAndWriteDataAccessor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/user/dataaccess/core/ReadAndWriteDataAccessorBase$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/user/dataaccess/core/ReadAndWriteDataAccessorBase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/user/dataaccess/core/ReadDataAccessor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/user/dataaccess/core/ReadDataAccessorBase.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/user/dataaccess/files/DirectoryReadDataAccessor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/cpa/subos/user/embed/fx/FXMusicHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/data/api/map/IMapBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/data/api/map/MapBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/data/location/Address.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/data/location/GPSLocation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/data/location/Location.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/data/parse/RawData.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/data/parse/ScriptObjectMirrorWrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/data/util/JsonUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/data/util/ReadUtil.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/data/web/UrlEncode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/data/web/WebPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/data/web/glosbe/translate/GlobseTranslation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/data/web/glosbe/translate/GlosbeTranslations.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/data/web/glosbe/translate/GlosbeTranslator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/data/web/openstreetmap/OSMBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/data/web/openstreetmap/OSMType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/data/web/openstreetmap/OpenStreetmapAccess.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/data/web/openstreetmap/OpenStreetmapAddress.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/data/web/openstreetmap/OpenStreetmapData.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/data/web/openstreetmap/OpenStreetmapType.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/data/web/wikipedia/WikipediaAccess.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/data/web/wikipedia/WikipediaPage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/data/web/wikipedia/WikipediaSearch.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/intern/suitefx/apptml/SuiteFXDisplay$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/intern/suitefx/apptml/SuiteFXDisplay$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/intern/suitefx/apptml/SuiteFXDisplay.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/intern/suitefx/apptml/SuiteFXFeatures$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/intern/suitefx/apptml/SuiteFXFeatures$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/intern/suitefx/apptml/SuiteFXFeatures$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/intern/suitefx/apptml/SuiteFXFeatures$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/intern/suitefx/apptml/SuiteFXFeatures$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/intern/suitefx/apptml/SuiteFXFeatures$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/intern/suitefx/apptml/SuiteFXFeatures$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/intern/suitefx/apptml/SuiteFXFeatures.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/intern/suitefx/apptml/SuiteFXLauncher.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/intern/suitefx/apptml/SuiteFXPlatform.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/intern/suitefx/apptml/languages/SuiteFxFxmlPlatform.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/intern/suitefx/apptml/languages/SuiteFxHtmlPlatform.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/intern/suitefx/apptml/languages/WebEngineWrapper$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/intern/suitefx/apptml/languages/WebEngineWrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/intern/suitefx/apptml/languages/intern/AppTMLSuitePart$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/intern/suitefx/apptml/languages/intern/AppTMLSuitePart.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/io/github/coalangsoft/intern/suitefx/apptml/languages/intern/FXMLSuitePart.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/test/IoTest$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/test/IoTest.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/test/UserTest.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppTMLTest.java" afterPath="$PROJECT_DIR$/src/AppTMLTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/strings_0.properties" afterPath="$PROJECT_DIR$/strings_0.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/strings_1.properties" afterPath="$PROJECT_DIR$/strings_1.properties" />
-    </list>
+    <list default="true" id="f8bb5208-fc70-4fc0-b523-cc9db938cb84" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/bin/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -91,12 +11,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="AppTMLTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/AppTMLTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+            <state relative-caret-position="272">
+              <caret line="28" column="1" lean-forward="false" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -116,7 +36,7 @@
         <entry file="file://$PROJECT_DIR$/strings_1.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -170,6 +90,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -192,14 +116,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Java/NewWorkspace/CCL/CclJars/coa0.6.2.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/novid/show/eclipse-workspace/workspace-jfx/DemoApp" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -351,17 +271,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="731" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -370,14 +290,15 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -388,62 +309,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../I_SuiteFX/src/io/github/coalangsoft/intern/suitefx/SuiteView.java">
+    <entry file="file://$PROJECT_DIR$/src/AppTMLTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="49" lean-forward="true" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Languages4AppTML/src/io/github/apptml/languages/java/ClassEngine.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../Languages4AppTML/src/io/github/apptml/languages/python/PythonPlatform.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../CPA/SubOS UserData/src/cpa/subos/user/dataaccess/files/DirectoryReadDataAccessor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="47" lean-forward="false" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/io/github/coalangsoft/intern/suitefx/apptml/SuiteFXPlatform.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../I_SuiteFX/src/BrowserView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="10" column="34" lean-forward="true" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../I_SuiteFX/src/SuiteFXDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -464,10 +333,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../I_SuiteFX/src/io/github/coalangsoft/intern/suitefx/SuiteView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="49" lean-forward="true" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Languages4AppTML/src/io/github/apptml/languages/java/ClassEngine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="15" column="26" lean-forward="false" selection-start-line="15" selection-start-column="26" selection-end-line="15" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Languages4AppTML/src/io/github/apptml/languages/python/PythonPlatform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../CPA/SubOS UserData/src/cpa/subos/user/dataaccess/files/DirectoryReadDataAccessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="47" lean-forward="false" selection-start-line="4" selection-start-column="47" selection-end-line="4" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/io/github/coalangsoft/intern/suitefx/apptml/SuiteFXPlatform.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../I_SuiteFX/src/BrowserView.java" />
+    <entry file="file://$PROJECT_DIR$/../I_SuiteFX/src/SuiteFXDemo.java" />
+    <entry file="file://$PROJECT_DIR$/strings_0.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/strings_1.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppTMLTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="26" column="1" lean-forward="true" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        <state relative-caret-position="272">
+          <caret line="28" column="1" lean-forward="false" selection-start-line="28" selection-start-column="1" selection-end-line="28" selection-end-column="1" />
           <folding />
         </state>
       </provider>

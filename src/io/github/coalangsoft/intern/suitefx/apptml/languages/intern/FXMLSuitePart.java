@@ -1,5 +1,7 @@
 package io.github.coalangsoft.intern.suitefx.apptml.languages.intern;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
 
@@ -8,6 +10,7 @@ import io.github.apptml.urlscripting.LanguageEngine;
 import io.github.coalangsoft.intern.suitefx.part.SimpleSuitePart;
 import io.github.coalangsoft.intern.suitefx.part.SuitePart;
 import io.github.coalangsoft.intern.suitefx.state.PartState;
+import io.github.coalangsoft.lib.io.StreamCopy;
 import io.github.coalangsoft.visit.Visitor;
 import io.github.coalangsoft.visitfx.ParentChildrenVisitor;
 import io.github.coalangsoft.visitfx.ScrollPaneContentVisitor;
@@ -38,7 +41,9 @@ public class FXMLSuitePart extends SimpleSuitePart {
 	@Override
 	public Node createView() {
 		try {
-			Node view = FXMLLoader.load(new URL(url));
+			File f = File.createTempFile("suitefx_apptml", ".fxml");
+			StreamCopy.copy(new URL(url).openStream(), new FileOutputStream(f));
+			Node view = FXMLLoader.load(f.toURI().toURL());
 			if(code != null){
 				String[] split = code.split("\\.");
 				engine = platform.scriptLanguages.get(split[split.length - 1]).newEngine();
